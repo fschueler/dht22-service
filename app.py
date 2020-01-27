@@ -13,5 +13,5 @@ def index():
 @app.route('/api/read')
 def temp():
   humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-  obj = {"humiditiy": humidity, "temperature": temperature } 
+  obj = {"humidity": humidity, "temperature": temperature } 
   return json.dumps(obj)
